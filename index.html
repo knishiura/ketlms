@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>ket-lms</title> 
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="ketcindyjs/jquery.min.js"></script> 
+<link rel="stylesheet" href="ketcindyjs/katex/katex11.min.css" /> 
+<script src="ketcindyjs/katex/katex11.min.js"></script> 
+<script src="ketcindyjs/auto-render11.min.js"></script> 
+<script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "[[", right: "]]", display: true},{left: "$", right: "$", display: false}]})});</script> 
+    
+</head> 
+<body> 
+<div style="padding: 30px">
+<p><size_50>&emsp;KeT-LMSの使い方</size_50>
+<size_30>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2023-09-20</size_30>
+</p>
+<ul style="list-style-type: circle"><size_25>
+<li><size_30>準備</size_30></li>
+<ul style="list-style-type: square">
+<li>Cinderellaのインストール<br>
+&emsp;<a href= "https://s-takato.github.io/ketcindyorg/indexj.html" >KeTCindy Home</a>&nbsp;内「最新ニュース」の「Cinderellaのインストール」<br>
+&emsp;を参考にインストールする
+</li>
+<li>KeTCindyのインストール<br>
+&emsp;<a href= "https://s-takato.github.io/ketcindyorg/indexj.html" >KeTCindy Home</a>&nbsp;内「KeTCindyとは」の「KeTCindyのインストール」<br>
+&emsp;を参考にインストールする
+</li>
+<li>Maximaのインストール<br>
+&emsp;<a href= "https://s-takato.github.io/ketcindyorg/indexj.html" >KeTCindy Home</a>&nbsp;内「最新ニュース」の「Maximaのインストール」<br>
+&emsp;を参考にインストールする
+</li>
+<li><color_red>KeT-LMSのファイル一式のダウンロード</color_red></li>
+<ol class="list_parentheses">
+<li>&nbsp;<a href= "https://github.com/s-takato/ketmath" >ketmath</a>&nbsp;の右にある「Releases/Latest」からダウンロードする</li>
+<li>&nbsp;ダウンロードしたzipを解凍する</li>
+<li>&nbsp;適当なフォルダに移動し，名称を変える
+<!--
+<br>
+（以下では<color_green>ketlms_example</color_green>とする）
+-->
+</li>
+</ol>
+</ul>
+<li><size_30>基本編</size_30><br>
+&emsp;問題の作成から答案の返却までの手順です<br>
+&emsp;（以下のファイル名，フォルダ名はダウンロードしたフォルダ内のもの）</li>
+<ol style="list-style-type: decimal">
+<li value="0">クラス名簿作成</li>
+<ul style="list-style-type: disc">
+<li>フォルダ&nbsp;data&nbsp;内の&nbsp;student2023.txt&nbsp;のように作成する</li>
+<li>名簿ファイルは&nbsp;data&nbsp;内に置く</li>
+<li>複数のクラス名簿を扱うことできる</li>
+複数のときは，以下の手順で，toolkemath.cdyのdataボタンでクラスを選択して行う
+</ul>
+<li>課題のテキストファイル作成</li>
+<ul style="list-style-type: disc">
+<li><a href= "https://s-takato.github.io/ketmath/ketindex/indexketlmsques.html" >KeT-LMSの課題ファイル</a>&nbsp;を参考にする</li>
+<li>フォルダ&nbsp;data&nbsp;内の&nbsp;question001-1.txt&nbsp;のように作成する</li>
+<li>課題ファイルは&nbsp;data&nbsp;内に置く<br>
+（以下の手順で作られるファイルの名称は&nbsp;question<color_green>001-1</color_green>.txt&nbsp;からのものである）</li>
+</ul>
+<li>課題のHTML作成</li>
+<ol class="list_parentheses">
+<li>&nbsp;toolkemath.cdyを立ち上げる</li>
+<li>「1.&nbsp;taskline&nbsp;を作成」を押し，「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;data&nbsp;内に&nbsp;1taskline&nbsp;001-1.txt&nbsp;,&nbsp;2anssheet&nbsp;001-1.txt&nbsp;,&nbsp;2anssheet&nbsp;001all.txt&nbsp;が作られる
+<li>「2.&nbsp;kettask&nbsp;に組込」を押し，kettaskorgv&nbsp;を選択し「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;課題&nbsp;<color_red>kettaskv&nbsp;001-1.html</color_red>&nbsp;が作られる
+</ol>
+<li>課題の配布</li>
+&emsp;課題を自分のホームページなどに置き，そのURLを学生に伝える
+<li>学生の解答</li>
+&emsp;学生は画面上のキーボードを使って入力する
+<ol class="list_parentheses">
+<li>課題のHTMLを開く</li>
+<li>自分の番号を入力し，「OK」を押す</li>
+<li>もう一度「OK」を押すと，大問が表示される</li>
+<!--
+<li>確認して，もう一度「OK」を押す&nbsp;$\to$&nbsp;大問の表示</li>
+<li>左の「>」を押す&nbsp;$\to$&nbsp;小問の表示</li>
+-->
+<li>左の「>」を押すと，小問が表示される</li>
+&emsp;&emsp;$\to$&nbsp;問題に解答する
+<li>もう一度「>」を押すと，次の小問が表示される</li>
+&emsp;「<」を押して，前の小問を解答し直してもよい
+<li>すべての問題に解答後，左下の「Rec」を押す</li>
+&emsp;&emsp;$\to$&nbsp;下の枠内に表示されるテキストをすべて選択コピーし，教員に送る
+</ol>
+<li>採点</li>
+<ol class="list_parentheses">
+<li>&nbsp;toolkemath.cdy&nbsp;を立ち上げる</li>
+<li>&nbsp;回収した答案データを&nbsp;data&nbsp;内の&nbsp;2anssheet&nbsp;001all.txt&nbsp;に貼り付ける</li>
+<li>「3.&nbsp;anssheetall&nbsp;分割」を押し，「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;問題ごとの&nbsp;2anssheet&nbsp;001-x.txt&nbsp;にコピーされる（1題のときは1つ）
+<li>「4.&nbsp;scoreline+scorechart」を押し，「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;data&nbsp;内に&nbsp;3scoreline&nbsp;001-1.txt,&nbsp;4scoresheet&nbsp;001-1.txt,&nbsp;4scoresheet&nbsp;001all.txt&nbsp;が作られる
+<li>「5.&nbsp;ketscore&nbsp;組込」を押し，ketscoreorgvn&nbsp;を選択し「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;ketscorev&nbsp;001-1n.html&nbsp;が作られる
+<li>手動で採点するときは，<a href="manual_saiten.html" >手動の採点</a>&nbsp;を参考にする</li>
+&emsp;&nbsp;&nbsp;Maximaで採点するとき<br>
+&emsp;&nbsp;&nbsp;「6.&nbsp;Maxima&nbsp;採点&nbsp;option」を押し，「実行」を押す<br>
+&emsp;&emsp;$\to$&nbsp;4_scoresheet&nbsp;001-1.txt&nbsp;が作られる<br>
+&emsp;注）エラーがある場合，errormaxima&nbsp;001-1.txt&nbsp;を参考にし，3scoreline&nbsp;001-1.txt&nbsp;を修正する
+<li>&nbsp;i.&nbsp;&nbsp;ketscorev001-1n.html&nbsp;を開く<br>
+&emsp;&nbsp;&nbsp;ii.&nbsp;&nbsp;4_scoresheet&nbsp;001-1.txt&nbsp;の中身をコピーし，&nbsp;ketscorev001-1n.html&nbsp;の最下欄に貼り付ける<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.「st」,「pg」で学生，ページを動かして，点数を確認，修正する<br>
+&emsp;&nbsp;iv.「Rec」を押し，最下欄のテキストをすべて選択コピーし，4_scoresheet&nbsp;001-1.txt&nbsp;の<br>&emsp;&emsp;&emsp;2行目に貼り付ける
+</li>
+</ol>
+<li>集計</li>
+<ol class="list_parentheses">
+<li>&nbsp;toolkemath.cdyを立ち上げる</li>
+<li>「8.&nbsp;問別個人別成績表作成」を押し，「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;data&nbsp;内に&nbsp;card&nbsp;が作られ，そのフォルダ内に問ごと，学生ごとの成績表が作られる
+<li>「9.&nbsp;個人別結合表作成」を押し，kettaskorg&nbsp;を選択し「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;card&nbsp;内に，学生ごとの成績表が作られる
+<li>「10.&nbsp;個人別結合表作成」を押し，kettaskorg&nbsp;を選択し「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;フォルダ内に，成績一覧表が作られる
+</ol>
+<li>返却</li>
+<ol class="list_parentheses">
+<li>&nbsp;Dropboxに返却用のフォルダを作る</li>
+<li>&nbsp;toolkemath.cdyを立ち上げる</li>
+<li>&nbsp;スクリプトエディタの7行目に返却用のフォルダ名を入力する</li>
+<li>「10.&nbsp;個人別結合表作成」を押し，「実行」を押す</li>
+&emsp;&emsp;$\to$&nbsp;Dropboxに学生ごとのフォルダが作られ，成績表が返却される
+</ol>
+</ol>
+<li><size_30>応用編（準備中）</size_30></li>
+<ul style="list-style-type: square">
+<li>kettaskへのpngの組込み</li>
+<li>kettaskへのketcindyjsスクリプトの組込み</li>
+</ul>
+</size_25></ul>
+</div>
+</body> 
+</html> 
+
